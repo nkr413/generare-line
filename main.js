@@ -43,7 +43,11 @@ function start() {
       ln_Y_top = 0;
       start();
       if (lnTwo_pos_top >= height) clearInterval(int);
-      if (ln_pos_left >= width) window.location.reload();
+      if (ln_pos_left >= width) {
+        setTimeout(() => {
+          window.location.reload();
+        }, 500);
+      }
     }
   }, 20);
 }
